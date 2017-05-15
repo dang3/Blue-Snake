@@ -10,8 +10,6 @@ public class Rules {
 	private World world;
 	private ArrayList<SnakeBody> snake;
 	private int panelWidth, panelHeight, snakeWidth;
-	boolean lost = false;
-	boolean foodEaten = false;
 	
 	public Rules(World world) {
 		this.world = world;
@@ -37,7 +35,6 @@ public class Rules {
 			snake.add( new SnakeBody(tailX - snakeWidth, tailY, snakeWidth ) );
 			// Reset food location
 			world.food.setFoodLocation();
-			foodEaten = false;
 			world.increaseScore();	// increase score
 			world.panel.updateScore(); // display score
 		}
