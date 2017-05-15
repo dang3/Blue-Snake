@@ -9,9 +9,6 @@ public class Food {
 	
 	public Food() {
 		setFoodLocation();
-//		foodSize = world.getSnakeWidth();
-//		multFactorX = (world.panel.getPanelWidth()/foodSize) - 1;
-		
 	}
 	
 	public int getFoodX() {
@@ -23,7 +20,7 @@ public class Food {
 	}
 
 	public void setFoodLocation() {
-		// x & y coords are multiples of 15
+		// foodX & foodY coords are multiples of 15
 		foodX = (int)((Math.random()*25) + 1)*15;
 		foodY = (int)((Math.random()*25) + 1)*15;
 	}
